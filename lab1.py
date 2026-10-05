@@ -6,7 +6,7 @@ data_steps = np.array([
     7600, 11300, 8300, 9700, 10400, 8900, 12100, 6800, 10200, 9200,
     200, 450, 8100, 11600, 7900, 9600, 10700, 8700, 12200, 6900
 ])
-sort_steps = sorted(data_steps)
+sort_steps = np.sort(data_steps)
 sum_step = 0
 
 # count = sum(i for i in data_steps)
@@ -143,3 +143,8 @@ print("Дисперсия: " + str(np.var(matrix)))
 print("Первый квартиль: " + str(np.percentile(matrix, 25)))
 print("Второй квартиль: " + str(np.percentile(matrixT, 50)))
 print("Третий квартиль: " + str(np.percentile(matrixT, 75)))
+
+print("Индивидульный вопрос:")
+for i in data_steps:
+    if i < 8000:
+        print(i)
